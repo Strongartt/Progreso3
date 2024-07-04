@@ -1,12 +1,16 @@
-﻿namespace Progreso3
+﻿using Progreso3.Repositories;
+
+namespace Progreso3
 {
     public partial class App : Application
     {
-        public App()
+        public static PaisesRepositories PaisRepo { get; private set; }
+
+        public App(PaisesRepositories repo)
         {
             InitializeComponent();
-
             MainPage = new AppShell();
+            PaisRepo = repo;
         }
     }
 }

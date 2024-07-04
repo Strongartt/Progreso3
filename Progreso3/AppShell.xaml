@@ -7,9 +7,9 @@
     Shell.FlyoutBehavior="Disabled"
     Title="Progreso3">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent Title="Países" ContentTemplate="{DataTemplate local:PaisView}" />
+        <ShellContent Title="Personaje Favorito" ContentTemplate="{DataTemplate local:PersonajeFavoritoView}" />
+    </TabBar>
 
 </Shell>
