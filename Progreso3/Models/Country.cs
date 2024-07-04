@@ -1,16 +1,13 @@
-﻿using SQLite;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PaisesExample.Models
+namespace Progreso3.Models
 {
-    public class Pais
+    public class Country
     {
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Region { get; set; }
         public string Subregion { get; set; }

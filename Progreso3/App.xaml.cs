@@ -1,16 +1,18 @@
-﻿using Progreso3.Repositories;
+﻿using Progreso3.Repositorios;
 
-namespace Progreso3
+namespace ExamenP3
 {
     public partial class App : Application
     {
-        public static PaisesRepositories PaisRepo { get; private set; }
+        public static CountryRepository CountryRepo { get; private set; }
 
-        public App(PaisesRepositories repo)
+        public App()
         {
             InitializeComponent();
-            MainPage = new AppShell();
-            PaisRepo = repo;
+
+            CountryRepo = new CountryRepository(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "countries.db3"));
+
+            MainPage = new NavigationPage(new Progreso3.Views.CountryView());
         }
     }
 }
